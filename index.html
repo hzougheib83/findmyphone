@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المستندات القانونية وسياسة الخصوصية | Find my phone</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #b91c1c;
+      --primary-dark: #991b1b;
+      --primary-light: #fef2f2;
+      --text-main: #1f2937;
+      --text-muted: #6b7280;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --radius: 14px;
+      --alert-bg: #fff1f2;
+      --alert-border: #fecdd3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.7;
+      padding: 24px 16px;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .header-card {
+      background: linear-gradient(135deg, #991b1b, #dc2626);
+      color: #fff;
+      padding: 32px 24px;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 25px -5px rgba(185, 28, 28, 0.28);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .header-card h1 {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .header-card p {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      letter-spacing: 0.3px;
+    }
+
+    .content-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .callout-box {
+      background-color: var(--alert-bg);
+      border: 1px solid var(--alert-border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 24px;
+    }
+
+    .callout-title {
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 24px 0 12px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title:first-of-type {
+      margin-top: 0;
+    }
+
+    .sub-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 16px 0 6px 0;
+    }
+
+    p {
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+
+    code {
+      background: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      color: #0f172a;
+    }
+
+    ul {
+      list-style: none;
+      margin: 12px 0 16px 0;
+      padding: 0;
+    }
+
+    ul li {
+      position: relative;
+      padding: 8px 24px 8px 0;
+      font-size: 0.95rem;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    ul li::before {
+      content: "•";
+      position: absolute;
+      right: 4px;
+      color: var(--primary);
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .en-section {
+      direction: ltr;
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+      margin-top: 36px;
+      border-top: 2px dashed var(--border);
+      padding-top: 32px;
+    }
+
+    .en-section ul li {
+      padding: 8px 0 8px 24px;
+    }
+
+    .en-section ul li::before {
+      right: auto;
+      left: 6px;
+    }
+
+    .divider {
+      margin: 28px 0;
+      border: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      border: 1px solid #fecdd3;
+      transition: background 0.2s;
+    }
+
+    .contact-btn:hover {
+      background-color: #fee2e2;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <header class="header-card">
+      <span class="badge">com.zoughaib.findmyphone</span>
+      <h1>Find my phone</h1>
+      <p>المستندات القانونية وسياسة الخصوصية • Legal &amp; Privacy Documents</p>
+      <p style="font-size: 0.85rem; margin-top: 4px;">آخر تحديث: سبتمبر 2026 | Last Updated: September 2026</p>
+    </header>
+
+    <main class="content-box">
+
+      <!-- ================= ARABIC SECTION ================= -->
+      <section>
+        <h2 class="section-title">1. بيان الإفصاح البارز (Prominent Disclosure)</h2>
+        <p><em>(يُعرض في نافذة تنبيه واضحة وبارزة عند أول تشغيل للتطبيق).</em></p>
+
+        <div class="callout-box">
+          <div class="callout-title">⚠️ هام: إفصاح الأمان واستخدام البيانات</div>
+          <p>تطبيق <strong>Find my phone</strong> هو أداة إنقاذ وطوارئ متخصصة للمساعدة في العثور على الهاتف واستعادته. لتقديم ميزات النجاة هذه، يحتاج التطبيق إلى أذونات حساسة تعمل في الخلفية:</p>
+          <ul>
+            <li><strong>الوصول إلى الرسائل القصيرة (SMS):</strong> لمراقبة والرد على أوامر الإنقاذ المحددة (مثل: <code>#findphone#</code>) المرسلة من جهات اتصال الطوارئ المعتمدة لديك، حتى عندما يكون التطبيق مغلقاً.</li>
+            <li><strong>الموقع في الخلفية (Background Location):</strong> لجلب إحداثيات موقعك وإرسالها للمسعفين عند استلام أمر الإنقاذ أو عند تفعيل ميزة الحارس الخفي (Stealth Guardian).</li>
+            <li><strong>مراقبة الميكروفون:</strong> لاكتشاف الأصوات عالية الشدة كالصافرات أو الصراخ لتشغيل تنبيه استغاثة تلقائي.</li>
+            <li><strong>معرف الجهاز والهوية:</strong> للتحقق من بياناتك وبطاقتك الطبية وعرضها للمسعفين.</li>
+          </ul>
+          <p style="margin-bottom: 0;"><strong>تعهد خصوصية البيانات:</strong> تتم معالجة بيانات الموقع والصوت محلياً بالكامل على جهازك. يتم إرسال البيانات فقط عبر رسائل SMS إلى جهة اتصال الطوارئ (ICE) التي تحددها يدوياً. نحن لا نجمع أو نبيع أو نشارك بياناتك مع أي خوادم خارجية أو شبكات إعلانية.</p>
+        </div>
+
+        <hr class="divider" />
+
+        <h2 class="section-title">2. سياسة الخصوصية (Privacy Policy)</h2>
+        <p><strong>اسم الحزمة (Package):</strong> <code>com.zoughaib.findmyphone</code></p>
+        
+        <h3 class="sub-title">مقدمة</h3>
+        <p>يلتزم تطبيق <strong>Find my phone</strong> ("نحن" أو "الخاص بنا") بحماية خصوصيتك بالكامل. توضح هذه السياسة كيف نتعامل مع بياناتك عند استخدام التطبيق.</p>
+
+        <h3 class="sub-title">البيانات التي نقوم بمعالجتها</h3>
+        <p>تطبيق <strong>Find my phone</strong> مصمم على مبدأ <em>"الخصوصية أولاً"</em>؛ حيث أننا لا نستخدم خوادم خارجية لتخزين بياناتك الشخصية.</p>
+        <ul>
+          <li><strong>بيانات الموقع:</strong> يصل التطبيق إلى موقعك الجغرافي الدقيق في الخلفية لتوفير الإحداثيات لجهات الإنقاذ. تُرسل هذه الإحداثيات فقط عبر SMS إلى جهة اتصال الطوارئ المعتمدة لديك وفقط عند استلام أمر مصرح به.</li>
+          <li><strong>البيانات الصوتية:</strong> يستخدم التطبيق الميكروفون لتحليل ترددات أصوات الاستغاثة (كالصافرات والصراخ). تتم معالجة الصوت في الوقت الفعلي في ذاكرة الجهاز المؤقتة ولا يُحفظ أو يُرفع إطلاقاً، باستثناء تسجيل الأدلة في "Stealth Guardian" الذي يُخزن محلياً فقط على هاتفك.</li>
+          <li><strong>بيانات الرسائل القصيرة (SMS):</strong> يراقب التطبيق الرسائل الواردة فقط للكشف عن مفتاح الأمان المخصص للإنقاذ، ولا يقوم بقراءة أو فحص أي محادثات شخصية أخرى.</li>
+          <li><strong>الملف الطبي (Medical ID):</strong> تُحفظ بياناتك الطبية (كالاسم وفصيلة الدم) محلياً وبشكل مشفر، ولا تظهر إلا على شاشة الطوارئ أثناء أحداث الاستغاثة.</li>
+        </ul>
+
+        <h3 class="sub-title">مشاركة البيانات</h3>
+        <p>نحن لا نشارك بياناتك إطلاقاً مع أي أطراف خارجية. يقتصر إرسال البيانات على رسائل SMS العادية إلى رقم الطوارئ الذي عينته بنفسك.</p>
+
+        <h3 class="sub-title">تحكم المستخدم</h3>
+        <p>لديك التحكم الكامل؛ يمكنك تعطيل المراقبة في أي وقت من لوحة التحكم بالتطبيق. كما يؤدي إلغاء تثبيت التطبيق إلى إيقاف جميع العمليات وحذف كافة البيانات والإعدادات المخزنة محلياً فوراً.</p>
+
+        <h3 class="sub-title">اتصل بنا</h3>
+        <p>إذا كانت لديك أي أسئلة بخصوص هذه السياسة، يسعدنا تواصلك معنا:</p>
+        <div class="contact-group">
+          <a href="tel:+96171017897" class="contact-btn">📞 +961 71 017 897</a>
+          <a href="mailto:zoughaib.co.lb@gmail.com" class="contact-btn">✉️ zoughaib.co.lb@gmail.com</a>
+        </div>
+      </section>
+
+      <!-- ================= ENGLISH SECTION ================= -->
+      <section class="en-section">
+        <h2 class="section-title">1. Prominent Disclosure Statement</h2>
+        <p><em>(Display this in a high-visibility dialog on the first app launch.)</em></p>
+
+        <div class="callout-box">
+          <div class="callout-title">⚠️ Important: Safety &amp; Data Usage Disclosure</div>
+          <p><strong>Find my phone</strong> is a specialized survival tool designed to assist in emergency recovery. To provide these life-saving features, the app requires the following high-risk background permissions:</p>
+          <ul>
+            <li><strong>SMS Access:</strong> To monitor for and respond to specific rescue commands (e.g., <code>#findphone#</code>) sent from your authorized emergency contacts, even when the app is closed.</li>
+            <li><strong>Background Location:</strong> To retrieve and send your coordinates to rescuers when a rescue command is received or when Stealth Guardian is active.</li>
+            <li><strong>Microphone Monitoring:</strong> To detect high-intensity sounds like whistles or screams to automatically trigger a rescue alert.</li>
+            <li><strong>Device ID &amp; Identity:</strong> To verify your medical ID information for rescuers.</li>
+          </ul>
+          <p style="margin-bottom: 0;"><strong>Data Privacy Promise:</strong> Your location and audio data are processed strictly on-device. Data is only transmitted via SMS to the ICE (In Case of Emergency) contact you manually specify. We do not collect, sell, or share your data with any third-party servers or advertisers.</p>
+        </div>
+
+        <hr class="divider" />
+
+        <h2 class="section-title">2. Privacy Policy</h2>
+        <p><strong>Package Name:</strong> <code>com.zoughaib.findmyphone</code></p>
+        
+        <h3 class="sub-title">Introduction</h3>
+        <p><strong>Find my phone</strong> ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use the <strong>Find my phone</strong> mobile application (package: <code>com.zoughaib.findmyphone</code>).</p>
+
+        <h3 class="sub-title">Data We Process</h3>
+        <p><strong>Find my phone</strong> is a <em>"Privacy-First"</em> utility. We do not use external servers to store your personal data.</p>
+        <ul>
+          <li><strong>Location Data:</strong> The app accesses your precise location (GPS and network-based) in the background to provide coordinates to rescuers. This data is only sent via SMS to your designated ICE contact when triggered by an authorized command.</li>
+          <li><strong>Audio Data:</strong> The app uses the microphone to monitor for specific sound frequencies (whistle/scream). Audio is processed in real-time in the device's volatile memory and is never saved or uploaded, except for the "Stealth Guardian" evidence recording which is stored only on your local device storage.</li>
+          <li><strong>SMS Data:</strong> The app monitors incoming SMS to detect specific rescue triggers. It does not read your personal conversations. It only parses messages containing your specific master security key.</li>
+          <li><strong>Medical ID:</strong> Personal information (Name, Blood Type) is stored locally in encrypted SharedPreferences and is only displayed on the Emergency Screen during a rescue event.</li>
+        </ul>
+
+        <h3 class="sub-title">Data Sharing</h3>
+        <p>We do not share your data with any third parties. Data transmission occurs only via standard SMS to the phone number you have explicitly provided as your emergency contact.</p>
+
+        <h3 class="sub-title">User Control</h3>
+        <p>You have full control over all features. Monitoring can be toggled off at any time from the app dashboard. Uninstalling the app immediately ceases all background monitoring and deletes all locally stored preferences.</p>
+
+        <h3 class="sub-title">Contact Us</h3>
+        <p>If you have questions about this Privacy Policy, please contact us at:</p>
+        <div class="contact-group">
+          <a href="tel:+96171017897" class="contact-btn">📞 +961 71 017 897</a>
+          <a href="mailto:zoughaib.co.lb@gmail.com" class="contact-btn">✉️ zoughaib.co.lb@gmail.com</a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © 2026 Find my phone. All rights reserved.
+    </footer>
+
+  </div>
+
+</body>
+</html>
