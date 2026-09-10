@@ -4,9 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>المستندات القانونية وسياسة الخصوصية | Find my phone</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
@@ -30,7 +27,7 @@
     }
 
     body {
-      font-family: 'Cairo', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text-main);
       line-height: 1.7;
@@ -163,7 +160,7 @@
     .en-section {
       direction: ltr;
       text-align: left;
-      font-family: 'Inter', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, Arial, sans-serif;
       margin-top: 36px;
       border-top: 2px dashed var(--border);
       padding-top: 32px;
@@ -216,17 +213,49 @@
       font-size: 0.85rem;
       margin-top: 30px;
     }
+
+    .privacy-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 18px 0;
+      font-size: 0.93rem;
+    }
+
+    .privacy-table th, .privacy-table td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: right;
+    }
+
+    .en-section .privacy-table th, .en-section .privacy-table td {
+      text-align: left;
+    }
+
+    .privacy-table th {
+      background: #f8fafc;
+      font-weight: 700;
+    }
+
+    .good-note {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin: 14px 0 18px 0;
+    }
+
   </style>
 </head>
 <body>
 
   <div class="container">
-    
+
     <header class="header-card">
-      
+      <span class="badge">Find my phone v3.5</span>
       <h1>Find my phone</h1>
       <p>المستندات القانونية وسياسة الخصوصية • Legal &amp; Privacy Documents</p>
-      <p style="font-size: 0.85rem; margin-top: 4px;">آخر تحديث: سبتمبر 2026 | Last Updated: September 2026</p>
+      <p style="font-size: 0.85rem; margin-top: 4px;">آخر تحديث: 10 سبتمبر 2026 | Last Updated: September 10, 2026</p>
     </header>
 
     <main class="content-box">
@@ -234,95 +263,155 @@
       <!-- ================= ARABIC SECTION ================= -->
       <section>
         <h2 class="section-title">1. بيان الإفصاح البارز (Prominent Disclosure)</h2>
-        <p><em>(يُعرض في نافذة تنبيه واضحة وبارزة عند أول تشغيل للتطبيق).</em></p>
+        <p><em>(يُعرض هذا الإفصاح للمستخدم قبل تفعيل ميزة الإنقاذ عبر المكالمات والأذونات المرتبطة بها).</em></p>
 
         <div class="callout-box">
-          <div class="callout-title">⚠️ هام: إفصاح الأمان واستخدام البيانات</div>
-          <p>تطبيق <strong>Find my phone</strong> هو أداة إنقاذ وطوارئ متخصصة للمساعدة في العثور على الهاتف واستعادته. لتقديم ميزات النجاة هذه، يحتاج التطبيق إلى أذونات حساسة تعمل في الخلفية:</p>
+          <div class="callout-title">⚠️ هام: كيفية عمل ميزة الإنقاذ واستخدام الأذونات</div>
+          <p>تطبيق <strong>Find my phone</strong> هو أداة إنقاذ تعمل دون الحاجة إلى الرسائل القصيرة أو الإنترنت أو الموقع. عندما يفعّل المستخدم الميزة ويختار التطبيق لدور <strong>Call Screening</strong> في Android، يستطيع التطبيق التحقق من المكالمات الواردة ومقارنتها بقائمة أرقام الإنقاذ التي يحددها المستخدم.</p>
           <ul>
-            <li><strong>الوصول إلى الرسائل القصيرة (SMS):</strong> لمراقبة والرد على أوامر الإنقاذ المحددة (مثل: <code>#findphone#</code>) المرسلة من جهات اتصال الطوارئ المعتمدة لديك، حتى عندما يكون التطبيق مغلقاً.</li>
-            <li><strong>الموقع في الخلفية (Background Location):</strong> لجلب إحداثيات موقعك وإرسالها للمسعفين عند استلام أمر الإنقاذ أو عند تفعيل ميزة الحارس الخفي (Stealth Guardian).</li>
-            <li><strong>مراقبة الميكروفون:</strong> لاكتشاف الأصوات عالية الشدة كالصافرات أو الصراخ لتشغيل تنبيه استغاثة تلقائي.</li>
-            <li><strong>معرف الجهاز والهوية:</strong> للتحقق من بياناتك وبطاقتك الطبية وعرضها للمسعفين.</li>
+            <li><strong>دور فحص المكالمات (Call Screening):</strong> يستخدم التطبيق واجهة Android الرسمية لفحص المكالمة الواردة، بما في ذلك رقم المتصل واتجاه المكالمة وحالة التحقق من رقم المتصل عندما يوفّرها النظام/شركة الاتصالات. إذا اتصل الرقم المصرح نفسه مرتين خلال 30 ثانية، يتم رفض المكالمة الثانية ويبدأ حدث الإنقاذ.</li>
+            <li><strong>الوصول إلى جهات الاتصال (READ_CONTACTS):</strong> قد يطلب التطبيق هذا الإذن حتى يسمح Android لخدمة فحص المكالمات باستقبال المكالمات الواردة من أرقام محفوظة أصلاً في جهات اتصال الهاتف. التطبيق الحالي لا يستعرض قاعدة بيانات جهات الاتصال ولا يعرضها ولا يرفعها أو يرسلها إلى أي جهة.</li>
+            <li><strong>الإشعارات والتنبيه بملء الشاشة:</strong> يستخدم التطبيق الإشعارات وميزة التنبيه بملء الشاشة لعرض شاشة الطوارئ على شاشة القفل عند تفعيل الإنقاذ، وفق إعدادات Android والأذونات التي يمنحها المستخدم.</li>
+            <li><strong>إعدادات الصوت وتشغيل الإنذار:</strong> عند بدء الإنقاذ، يرفع التطبيق مستوى صوت <em>Alarm</em> مؤقتاً ويشغّل إنذاراً متكرراً باستخدام خدمة تشغيل في المقدمة. يستمر الإنذار إلى أن يتم إدخال كلمة مرور إيقاف الإنقاذ الصحيحة أو إلى أن يوقفه Android/المستخدم على مستوى النظام.</li>
+            <li><strong>المعلومات الطبية على شاشة القفل:</strong> أثناء حدث الإنقاذ قد تظهر المعلومات التي أدخلها المستخدم، مثل الاسم وفصيلة الدم ورقم جهة اتصال الطوارئ، على شاشة الطوارئ فوق شاشة القفل بهدف تمكين من يعثر على الهاتف من الاطلاع عليها.</li>
           </ul>
-          <p style="margin-bottom: 0;"><strong>تعهد خصوصية البيانات:</strong> تتم معالجة بيانات الموقع والصوت محلياً بالكامل على جهازك. يتم إرسال البيانات فقط عبر رسائل SMS إلى جهة اتصال الطوارئ (ICE) التي تحددها يدوياً. نحن لا نجمع أو نبيع أو نشارك بياناتك مع أي خوادم خارجية أو شبكات إعلانية.</p>
+          <p style="margin-bottom: 0;"><strong>لا يستخدم التطبيق:</strong> SMS، الموقع، الكاميرا، الميكروفون، سجل المكالمات، أو خدمة سحابية خاصة بالتطبيق. لا يحتوي إصدار v3.4 على إذن <code>INTERNET</code>.</p>
         </div>
 
         <hr class="divider" />
 
         <h2 class="section-title">2. سياسة الخصوصية (Privacy Policy)</h2>
-        <p><strong>اسم الحزمة (Package):</strong> <code>com.zoughaib.findmyphone</code></p>
-        
-        <h3 class="sub-title">مقدمة</h3>
-        <p>يلتزم تطبيق <strong>Find my phone</strong> ("نحن" أو "الخاص بنا") بحماية خصوصيتك بالكامل. توضح هذه السياسة كيف نتعامل مع بياناتك عند استخدام التطبيق.</p>
+        <p><strong>اسم التطبيق:</strong> Find my phone</p>
+        <p><strong>اسم الحزمة (Package):</strong> <code>com.zoughaib.acousticrescue</code></p>
 
-        <h3 class="sub-title">البيانات التي نقوم بمعالجتها</h3>
-        <p>تطبيق <strong>Find my phone</strong> مصمم على مبدأ <em>"الخصوصية أولاً"</em>؛ حيث أننا لا نستخدم خوادم خارجية لتخزين بياناتك الشخصية.</p>
+        <h3 class="sub-title">مقدمة</h3>
+        <p>توضح هذه السياسة كيفية وصول <strong>Find my phone</strong> إلى البيانات واستخدامها وتخزينها عند تشغيل ميزة الإنقاذ عبر المكالمات. صُمم التطبيق ليعمل محلياً على جهاز المستخدم قدر الإمكان.</p>
+
+        <h3 class="sub-title">البيانات التي يعالجها التطبيق</h3>
+        <table class="privacy-table">
+          <tr><th>نوع البيانات</th><th>الغرض</th><th>مكان المعالجة/التخزين</th></tr>
+          <tr><td>الاسم، فصيلة الدم، رقم ICE</td><td>عرض بطاقة معلومات الطوارئ أثناء الإنقاذ</td><td>محلياً على الجهاز</td></tr>
+          <tr><td>أرقام Rescue Caller (حتى 10)</td><td>مقارنة رقم المتصل بقائمة الأرقام المصرح لها</td><td>محلياً على الجهاز</td></tr>
+          <tr><td>رقم المتصل الوارد وبيانات فحص المكالمة</td><td>تحديد ما إذا كانت المكالمة من رقم إنقاذ مصرح، وتنفيذ منطق المكالمتين خلال 30 ثانية، وعرض تشخيص آخر حدث</td><td>تُعالج محلياً؛ يحتفظ التطبيق محلياً ببيانات تشخيص آخر عملية فحص، بما في ذلك آخر رقم تم فحصه، إلى أن يتم استبدالها أو مسح بيانات التطبيق</td></tr>
+          <tr><td>حالة التحقق من رقم المتصل</td><td>دعم خيار رفض الأرقام التي يفشل تحقق الشبكة منها عندما يفعّل المستخدم هذا الخيار</td><td>محلياً على الجهاز</td></tr>
+          <tr><td>كلمة مرور إيقاف الإنقاذ</td><td>منع إيقاف الإنذار من واجهة التطبيق دون كلمة المرور الصحيحة</td><td>لا تُحفظ كلمة المرور نفسها؛ يُحفظ محلياً فقط <strong>salt</strong> واشتقاق أحادي الاتجاه باستخدام PBKDF2-HMAC-SHA256</td></tr>
+          <tr><td>إعدادات التطبيق وحالة الميزة وآخر حدث</td><td>تشغيل الميزة وتقديم حالة تشخيصية للمستخدم</td><td>محلياً على الجهاز</td></tr>
+        </table>
+
+        <div class="good-note">
+          <strong>لا يوجد جمع بيانات على خوادمنا:</strong> لا يرسل التطبيق هذه البيانات إلى خادم تابع لنا، ولا يحتوي التطبيق نفسه على SDK للإعلانات أو التحليلات أو Firebase، ولا يبيع بيانات المستخدم أو يشاركها لأغراض إعلانية.
+        </div>
+
+        <h3 class="sub-title">الأذونات والقدرات المستخدمة</h3>
         <ul>
-          <li><strong>بيانات الموقع:</strong> يصل التطبيق إلى موقعك الجغرافي الدقيق في الخلفية لتوفير الإحداثيات لجهات الإنقاذ. تُرسل هذه الإحداثيات فقط عبر SMS إلى جهة اتصال الطوارئ المعتمدة لديك وفقط عند استلام أمر مصرح به.</li>
-          <li><strong>البيانات الصوتية:</strong> يستخدم التطبيق الميكروفون لتحليل ترددات أصوات الاستغاثة (كالصافرات والصراخ). تتم معالجة الصوت في الوقت الفعلي في ذاكرة الجهاز المؤقتة ولا يُحفظ أو يُرفع إطلاقاً، باستثناء تسجيل الأدلة في "Stealth Guardian" الذي يُخزن محلياً فقط على هاتفك.</li>
-          <li><strong>بيانات الرسائل القصيرة (SMS):</strong> يراقب التطبيق الرسائل الواردة فقط للكشف عن مفتاح الأمان المخصص للإنقاذ، ولا يقوم بقراءة أو فحص أي محادثات شخصية أخرى.</li>
-          <li><strong>الملف الطبي (Medical ID):</strong> تُحفظ بياناتك الطبية (كالاسم وفصيلة الدم) محلياً وبشكل مشفر، ولا تظهر إلا على شاشة الطوارئ أثناء أحداث الاستغاثة.</li>
+          <li><strong>READ_CONTACTS:</strong> لجعل Android يمرّر أيضاً المكالمات الواردة من أرقام محفوظة في جهات الاتصال إلى خدمة فحص المكالمات. لا يستخدم التطبيق هذا الإذن لنسخ أو رفع دفتر العناوين.</li>
+          <li><strong>POST_NOTIFICATIONS:</strong> لإظهار إشعار الإنقاذ وإشعار استمرار تشغيل الإنذار.</li>
+          <li><strong>USE_FULL_SCREEN_INTENT:</strong> لطلب إظهار واجهة الطوارئ فوق شاشة القفل للأحداث العاجلة. في الإصدارات الحديثة من Android قد يتطلب ذلك موافقة خاصة من المستخدم، ويمكن للمستخدم إلغاءها من إعدادات النظام.</li>
+          <li><strong>MODIFY_AUDIO_SETTINGS:</strong> لرفع مستوى صوت قناة الإنذار أثناء حالة الإنقاذ ثم محاولة استعادة المستوى السابق عند إيقاف الإنذار.</li>
+          <li><strong>FOREGROUND_SERVICE / FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong> لإبقاء صوت إنذار الإنقاذ مستمراً في الخلفية مع إشعار ظاهر للمستخدم.</li>
+          <li><strong>Call Screening Role:</strong> دور نظام Android يختاره المستخدم صراحة للسماح للتطبيق بفحص المكالمات الواردة واتخاذ قرار السماح أو الرفض ضمن مهلة Android.</li>
         </ul>
 
+        <h3 class="sub-title">البيانات التي لا يصل إليها التطبيق</h3>
+        <p>لا يطلب التطبيق أذونات SMS أو الموقع أو الكاميرا أو الميكروفون أو سجل المكالمات. كما أن الإصدار الحالي لا يطلب إذن الإنترنت ولا يرسل بيانات الملف الطبي أو أرقام الإنقاذ أو كلمة المرور إلى خوادم خارجية.</p>
+
         <h3 class="sub-title">مشاركة البيانات</h3>
-        <p>نحن لا نشارك بياناتك إطلاقاً مع أي أطراف خارجية. يقتصر إرسال البيانات على رسائل SMS العادية إلى رقم الطوارئ الذي عينته بنفسك.</p>
+        <p>لا يبيع التطبيق بياناتك ولا يشارك بيانات التطبيق المخزنة محلياً مع معلنين أو وسطاء بيانات أو خدمات تحليلية. بيانات فحص المكالمات مصدرها نظام Android وشبكة الهاتف وتُستخدم محلياً لتحديد تفعيل الإنقاذ.</p>
+
+        <h3 class="sub-title">الاحتفاظ بالبيانات وحذفها</h3>
+        <p>تبقى معلومات الملف الطبي، أرقام الإنقاذ، الإعدادات، وبصمة كلمة المرور محلياً حتى يقوم المستخدم بتعديلها أو مسح بيانات التطبيق أو إلغاء تثبيته. يحتفظ التطبيق بطوابع زمنية محلية لازمة للتعرف على تسلسل المكالمتين وبآخر معلومات تشخيصية إلى أن يتم استبدالها أو حذف بيانات التطبيق.</p>
+
+        <h3 class="sub-title">أمان كلمة المرور</h3>
+        <p>كلمة مرور إيقاف الإنقاذ لا تُخزن كنص قابل للقراءة. يحتفظ التطبيق محلياً بقيمة salt عشوائية ونتيجة مشتقة باستخدام PBKDF2-HMAC-SHA256 للتحقق من كلمة المرور. هذا لا يعني أن جميع بيانات التطبيق الأخرى مشفرة؛ معلومات الملف الطبي وأرقام الإنقاذ والإعدادات محفوظة في مساحة التطبيق الخاصة بنظام Android.</p>
 
         <h3 class="sub-title">تحكم المستخدم</h3>
-        <p>لديك التحكم الكامل؛ يمكنك تعطيل المراقبة في أي وقت من لوحة التحكم بالتطبيق. كما يؤدي إلغاء تثبيت التطبيق إلى إيقاف جميع العمليات وحذف كافة البيانات والإعدادات المخزنة محلياً فوراً.</p>
+        <p>يمكن للمستخدم تعطيل ميزة الإنقاذ عبر المكالمات، إلغاء دور Call Screening، إلغاء أذونات جهات الاتصال أو الإشعارات، وتعطيل Full-Screen Alerts من إعدادات Android. يمكن حذف البيانات المحلية بمسح مساحة تخزين التطبيق أو إلغاء تثبيت التطبيق.</p>
+
+        <h3 class="sub-title">قيود مهمة</h3>
+        <p>تعتمد ميزة الإنقاذ على توفر شبكة اتصال صوتية خلوية وعلى دعم Android لدور Call Screening والإشعارات/التنبيهات بملء الشاشة. قد تختلف طريقة ظهور شاشة الطوارئ وسلوك الصوت بحسب إصدار Android، الشركة المصنّعة، وضع عدم الإزعاج، وإعدادات المستخدم. لا يستطيع التطبيق منع المستخدم أو نظام Android من فرض إيقاف التطبيق أو إعادة تشغيل الجهاز.</p>
 
         <h3 class="sub-title">اتصل بنا</h3>
-        <p>إذا كانت لديك أي أسئلة بخصوص هذه السياسة، يسعدنا تواصلك معنا:</p>
+        <p>إذا كانت لديك أي أسئلة بخصوص هذه السياسة، يمكنك التواصل معنا:</p>
         <div class="contact-group">
-          <a href="tel:+96171017897" class="contact-btn">897 017 71 961+📞</a>
-          <a href="mailto:zoughaib.co.lb@gmail.com" class="contact-btn">zoughaib.co.lb@gmail.com ✉️</a>
+          <a href="tel:+96171017897" class="contact-btn">📞 +961 71 017 897</a>
+          <a href="mailto:zoughaib.co.lb@gmail.com" class="contact-btn">✉️ zoughaib.co.lb@gmail.com</a>
         </div>
       </section>
 
       <!-- ================= ENGLISH SECTION ================= -->
       <section class="en-section">
         <h2 class="section-title">1. Prominent Disclosure Statement</h2>
-        <p><em>(Display this in a high-visibility dialog on the first app launch.)</em></p>
+        <p><em>(Display this disclosure before the user enables offline call rescue and its related permissions/system access.)</em></p>
 
         <div class="callout-box">
-          <div class="callout-title">⚠️ Important: Safety &amp; Data Usage Disclosure</div>
-          <p><strong>Find my phone</strong> is a specialized survival tool designed to assist in emergency recovery. To provide these life-saving features, the app requires the following high-risk background permissions:</p>
+          <div class="callout-title">⚠️ Important: Rescue Operation &amp; Permission Disclosure</div>
+          <p><strong>Find my phone</strong> is an offline rescue utility that does not depend on SMS, Internet connectivity, or location. When the user enables the feature and selects Find my phone for Android's <strong>Call Screening</strong> role, Android can provide incoming-call information so the app can compare the caller with the Rescue Caller numbers configured by the user.</p>
           <ul>
-            <li><strong>SMS Access:</strong> To monitor for and respond to specific rescue commands (e.g., <code>#findphone#</code>) sent from your authorized emergency contacts, even when the app is closed.</li>
-            <li><strong>Background Location:</strong> To retrieve and send your coordinates to rescuers when a rescue command is received or when Stealth Guardian is active.</li>
-            <li><strong>Microphone Monitoring:</strong> To detect high-intensity sounds like whistles or screams to automatically trigger a rescue alert.</li>
-            <li><strong>Device ID &amp; Identity:</strong> To verify your medical ID information for rescuers.</li>
+            <li><strong>Call Screening role:</strong> The app uses Android's official call-screening API to process incoming call details, including the caller number, call direction, and caller-number verification status when provided by Android/carrier. If the same authorized Rescue Caller calls twice within 30 seconds, the second call is rejected and the rescue event is activated.</li>
+            <li><strong>Contacts permission (READ_CONTACTS):</strong> The app may request this permission so Android will also deliver calls from numbers already saved in the phone's Contacts to the call-screening service. The current app does not enumerate, display, upload, or transmit the device's contacts database.</li>
+            <li><strong>Notifications &amp; full-screen alerts:</strong> The app uses notifications and a full-screen alert to present the emergency interface on the lock screen when rescue is triggered, subject to Android version, system settings, and user-granted access.</li>
+            <li><strong>Audio settings &amp; rescue alarm:</strong> When rescue starts, the app temporarily raises the Android alarm stream and starts a looping rescue alarm through a foreground playback service. The alarm continues until the correct locally configured rescue-stop password is entered, or until Android/the device owner stops the app at the system level.</li>
+            <li><strong>Medical information on lock screen:</strong> During an active rescue event, information the user entered—such as display name, blood group, and ICE number—may be shown above the lock screen so a person who finds the phone can view it.</li>
           </ul>
-          <p style="margin-bottom: 0;"><strong>Data Privacy Promise:</strong> Your location and audio data are processed strictly on-device. Data is only transmitted via SMS to the ICE (In Case of Emergency) contact you manually specify. We do not collect, sell, or share your data with any third-party servers or advertisers.</p>
+          <p style="margin-bottom: 0;"><strong>The app does not use:</strong> SMS, location, camera, microphone, Call Log, or an app-operated cloud backend. Version 3.4 does not declare the Android <code>INTERNET</code> permission.</p>
         </div>
 
         <hr class="divider" />
 
         <h2 class="section-title">2. Privacy Policy</h2>
-        <p><strong>Package Name:</strong> <code>com.zoughaib.findmyphone</code></p>
-        
-        <h3 class="sub-title">Introduction</h3>
-        <p><strong>Find my phone</strong> ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use the <strong>Find my phone</strong> mobile application (package: <code>com.zoughaib.findmyphone</code>).</p>
+        <p><strong>App Name:</strong> Find my phone</p>
+        <p><strong>Package Name:</strong> <code>com.zoughaib.acousticrescue</code></p>
 
-        <h3 class="sub-title">Data We Process</h3>
-        <p><strong>Find my phone</strong> is a <em>"Privacy-First"</em> utility. We do not use external servers to store your personal data.</p>
+        <h3 class="sub-title">Introduction</h3>
+        <p>This Privacy Policy explains how <strong>Find my phone</strong> accesses, uses, and stores information when the offline call-rescue feature is enabled. The current app is designed to process rescue information locally on the user's device wherever possible.</p>
+
+        <h3 class="sub-title">Data the App Processes</h3>
+        <table class="privacy-table">
+          <tr><th>Data</th><th>Purpose</th><th>Processing / storage</th></tr>
+          <tr><td>Display name, blood group, ICE number</td><td>Display the emergency information card during a rescue event</td><td>Stored locally on the device</td></tr>
+          <tr><td>Rescue Caller numbers (up to 10)</td><td>Compare incoming caller ID with the user's authorized Rescue Caller list</td><td>Stored locally on the device</td></tr>
+          <tr><td>Incoming caller number and call-screening details</td><td>Determine whether the call is authorized, implement the two-calls-within-30-seconds trigger, and provide last-event diagnostics</td><td>Processed locally; the app also keeps local diagnostic information about the most recently screened call, including the last screened number, until replaced or app data is cleared</td></tr>
+          <tr><td>Caller-number verification status</td><td>Support the optional setting that rejects calls where network verification explicitly fails</td><td>Stored locally on the device as diagnostic/settings data</td></tr>
+          <tr><td>Rescue-stop password</td><td>Prevent the rescue alarm from being stopped through the app UI without the correct password</td><td>The plaintext password is not stored. The app stores only a random salt and a one-way PBKDF2-HMAC-SHA256 derived value locally</td></tr>
+          <tr><td>App settings, feature state, timestamps, and last-event diagnostics</td><td>Operate the rescue sequence and show readiness/diagnostic state to the user</td><td>Stored locally on the device</td></tr>
+        </table>
+
+        <div class="good-note">
+          <strong>No developer-server collection:</strong> The current app does not transmit this information to a server operated by us. The app does not include advertising, analytics, or Firebase SDKs, and we do not sell app data or share it for advertising purposes.
+        </div>
+
+        <h3 class="sub-title">Permissions and System Capabilities</h3>
         <ul>
-          <li><strong>Location Data:</strong> The app accesses your precise location (GPS and network-based) in the background to provide coordinates to rescuers. This data is only sent via SMS to your designated ICE contact when triggered by an authorized command.</li>
-          <li><strong>Audio Data:</strong> The app uses the microphone to monitor for specific sound frequencies (whistle/scream). Audio is processed in real-time in the device's volatile memory and is never saved or uploaded, except for the "Stealth Guardian" evidence recording which is stored only on your local device storage.</li>
-          <li><strong>SMS Data:</strong> The app monitors incoming SMS to detect specific rescue triggers. It does not read your personal conversations. It only parses messages containing your specific master security key.</li>
-          <li><strong>Medical ID:</strong> Personal information (Name, Blood Type) is stored locally in encrypted SharedPreferences and is only displayed on the Emergency Screen during a rescue event.</li>
+          <li><strong>READ_CONTACTS:</strong> Used so Android Telecom can also deliver calls from numbers that are already stored in Contacts to the call-screening service. The app does not use this permission to copy or upload the address book.</li>
+          <li><strong>POST_NOTIFICATIONS:</strong> Used for rescue notifications and the visible notification while the rescue alarm is active.</li>
+          <li><strong>USE_FULL_SCREEN_INTENT:</strong> Used to request the emergency interface above the lock screen for an urgent rescue event. On newer Android versions this can require separate user approval and can be revoked in system settings.</li>
+          <li><strong>MODIFY_AUDIO_SETTINGS:</strong> Used to raise the Android alarm stream during rescue and attempt to restore the previous alarm volume when rescue ends.</li>
+          <li><strong>FOREGROUND_SERVICE / FOREGROUND_SERVICE_MEDIA_PLAYBACK:</strong> Used to keep the audible rescue alarm playing in the background with an ongoing user-visible notification.</li>
+          <li><strong>Call Screening role:</strong> A user-selected Android system role that allows the app to receive incoming-call screening details and allow or reject a call within Android's required response window.</li>
         </ul>
 
-        <h3 class="sub-title">Data Sharing</h3>
-        <p>We do not share your data with any third parties. Data transmission occurs only via standard SMS to the phone number you have explicitly provided as your emergency contact.</p>
+        <h3 class="sub-title">Data the App Does Not Access</h3>
+        <p>The current app does not request SMS, location, camera, microphone, or Call Log permissions. It also does not request the Android Internet permission and does not transmit the medical profile, Rescue Caller list, or rescue password to an external application server.</p>
 
-        <h3 class="sub-title">User Control</h3>
-        <p>You have full control over all features. Monitoring can be toggled off at any time from the app dashboard. Uninstalling the app immediately ceases all background monitoring and deletes all locally stored preferences.</p>
+        <h3 class="sub-title">Data Sharing</h3>
+        <p>The app does not sell your data or share locally stored app data with advertisers, data brokers, or analytics providers. Call-screening information originates from Android/your carrier and is processed locally to decide whether rescue should activate.</p>
+
+        <h3 class="sub-title">Retention and Deletion</h3>
+        <p>Your medical profile, Rescue Caller numbers, settings, and password verification data remain locally until you change them, clear the app's storage, or uninstall the app. Local timestamps used for the double-call sequence and last-call diagnostic information remain until replaced/removed by later app activity or until app data is cleared.</p>
+
+        <h3 class="sub-title">Password Security</h3>
+        <p>The rescue-stop password is not stored as readable plaintext. The app stores a random salt and a PBKDF2-HMAC-SHA256 derived value locally for verification. This does not mean all other app data is encrypted: the medical profile, Rescue Caller list, and settings are stored in Android's private app storage.</p>
+
+        <h3 class="sub-title">User Controls</h3>
+        <p>You can disable Offline Call Rescue, remove Find my phone from the Call Screening role, revoke Contacts or Notification permissions, and disable Full-Screen Alerts from Android system settings. You can delete local app data by clearing the app's storage or uninstalling the app.</p>
+
+        <h3 class="sub-title">Important Limitations</h3>
+        <p>Offline Call Rescue depends on an available cellular voice network and Android support for Call Screening and emergency notifications/full-screen alerts. Lock-screen display and alarm behavior can vary by Android version, device manufacturer, Do Not Disturb configuration, and user settings. Find my phone cannot prevent the device owner or Android itself from force-stopping the app or rebooting the device.</p>
 
         <h3 class="sub-title">Contact Us</h3>
-        <p>If you have questions about this Privacy Policy, please contact us at:</p>
+        <p>If you have questions about this Privacy Policy, contact:</p>
         <div class="contact-group">
-          <a href="tel:+96171017897" class="contact-btn">📞 +961 71 017 897 </a>
+          <a href="tel:+96171017897" class="contact-btn">📞 +961 71 017 897</a>
           <a href="mailto:zoughaib.co.lb@gmail.com" class="contact-btn">✉️ zoughaib.co.lb@gmail.com</a>
         </div>
       </section>
