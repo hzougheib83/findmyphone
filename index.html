@@ -252,10 +252,10 @@
   <div class="container">
 
     <header class="header-card">
-      <span class="badge">Find my phone v3.7</span>
+      <span class="badge">Find my phone v3.9</span>
       <h1>Find my phone</h1>
       <p>المستندات القانونية وسياسة الخصوصية • Legal &amp; Privacy Documents</p>
-      <p style="font-size: 0.85rem; margin-top: 4px;">آخر تحديث: 10 سبتمبر 2026 | Last Updated: September 10, 2026</p>
+      <p style="font-size: 0.85rem; margin-top: 4px;">آخر تحديث: 2 نوفمبر 2026 | Last Updated: November 2, 2026</p>
     </header>
 
     <main class="content-box">
@@ -273,9 +273,9 @@
             <li><strong>الوصول إلى جهات الاتصال (READ_CONTACTS):</strong> قد يطلب التطبيق هذا الإذن حتى يسمح Android لخدمة فحص المكالمات باستقبال المكالمات الواردة من أرقام محفوظة أصلاً في جهات اتصال الهاتف. التطبيق الحالي لا يستعرض قاعدة بيانات جهات الاتصال ولا يعرضها ولا يرفعها أو يرسلها إلى أي جهة.</li>
             <li><strong>الإشعارات والتنبيه بملء الشاشة:</strong> يستخدم التطبيق الإشعارات وميزة التنبيه بملء الشاشة لعرض شاشة الطوارئ على شاشة القفل عند تفعيل الإنقاذ، وفق إعدادات Android والأذونات التي يمنحها المستخدم.</li>
             <li><strong>إعدادات الصوت وتشغيل الإنذار:</strong> عند بدء الإنقاذ، يرفع التطبيق مستوى صوت <em>Alarm</em> مؤقتاً ويشغّل إنذاراً متكرراً باستخدام خدمة تشغيل في المقدمة. يستمر الإنذار إلى أن يتم إدخال كلمة مرور إيقاف الإنقاذ الصحيحة أو إلى أن يوقفه Android/المستخدم على مستوى النظام.</li>
-            <li><strong>المعلومات الطبية على شاشة القفل:</strong> أثناء حدث الإنقاذ قد تظهر المعلومات التي أدخلها المستخدم، مثل الاسم وفصيلة الدم ورقم جهة اتصال الطوارئ، على شاشة الطوارئ فوق شاشة القفل بهدف تمكين من يعثر على الهاتف من الاطلاع عليها.</li>
+            <li><strong>الملف الشخصي:</strong> تبقى بيانات الاسم وفصيلة الدم ورقم الطوارئ محلية. تخفي شاشة الإنذار هذه الحقول عندما يبلغ Android أن الجهاز مقفل. لا نمرّر هذه البيانات إلى حزمة الإعلانات.</li>
           </ul>
-          <p style="margin-bottom: 0;"><strong>لا يستخدم التطبيق:</strong> SMS، الموقع، الكاميرا، الميكروفون، سجل المكالمات، أو خدمة سحابية خاصة بالتطبيق. لا يحتوي إصدار v3.7 على إذن <code>INTERNET</code>.</p>
+          <p style="margin-bottom: 0;"><strong>لا يستخدم التطبيق:</strong> SMS، الموقع، الكاميرا، الميكروفون، سجل المكالمات، أو خدمة سحابية خاصة بالتطبيق. تستخدم الإعلانات ورسائل خيارات الخصوصية على الشاشة الرئيسية إذن <code>INTERNET</code>؛ وتبقى ميزة العثور على الهاتف عبر المكالمات متاحة دون إنترنت.</p>
         </div>
 
         <hr class="divider" />
@@ -292,18 +292,26 @@
           <tr><th>نوع البيانات</th><th>الغرض</th><th>مكان المعالجة/التخزين</th></tr>
           <tr><td>الاسم، فصيلة الدم، رقم ICE</td><td>عرض بطاقة معلومات الطوارئ أثناء الإنقاذ</td><td>محلياً على الجهاز</td></tr>
           <tr><td>أرقام Rescue Caller (حتى 10)</td><td>مقارنة رقم المتصل بقائمة الأرقام المصرح لها</td><td>محلياً على الجهاز</td></tr>
-          <tr><td>رقم المتصل الوارد وبيانات فحص المكالمة</td><td>تحديد ما إذا كانت المكالمة من رقم إنقاذ مصرح، وتنفيذ منطق المكالمتين خلال 30 ثانية، وعرض تشخيص آخر حدث</td><td>تُعالج محلياً؛ يحتفظ التطبيق محلياً ببيانات تشخيص آخر عملية فحص، بما في ذلك آخر رقم تم فحصه، إلى أن يتم استبدالها أو مسح بيانات التطبيق</td></tr>
+          <tr><td>رقم المتصل الوارد وبيانات فحص المكالمة</td><td>تحديد ما إذا كانت المكالمة من رقم إنقاذ مصرح، وتنفيذ منطق المكالمتين خلال 30 ثانية، وعرض تشخيص آخر حدث</td><td>تُعالج محلياً؛ يحتفظ التطبيق محلياً ببيانات تشخيص آخر عملية فحص، مع إخفاء معظم أرقام المتصل في نص التشخيص، إلى أن يتم استبدالها أو مسح بيانات التطبيق</td></tr>
           <tr><td>حالة التحقق من رقم المتصل</td><td>دعم خيار رفض الأرقام التي يفشل تحقق الشبكة منها عندما يفعّل المستخدم هذا الخيار</td><td>محلياً على الجهاز</td></tr>
           <tr><td>كلمة مرور إيقاف الإنقاذ</td><td>منع إيقاف الإنذار من واجهة التطبيق دون كلمة المرور الصحيحة</td><td>لا تُحفظ كلمة المرور نفسها؛ يُحفظ محلياً فقط <strong>salt</strong> واشتقاق أحادي الاتجاه باستخدام PBKDF2-HMAC-SHA256</td></tr>
           <tr><td>إعدادات التطبيق وحالة الميزة وآخر حدث</td><td>تشغيل الميزة وتقديم حالة تشخيصية للمستخدم</td><td>محلياً على الجهاز</td></tr>
         </table>
 
         <div class="good-note">
-          <strong>لا يوجد جمع بيانات على خوادمنا:</strong> لا يرسل التطبيق هذه البيانات إلى خادم تابع لنا، ولا يحتوي التطبيق نفسه على SDK للإعلانات أو التحليلات أو Firebase، ولا يبيع بيانات المستخدم أو يشاركها لأغراض إعلانية.
+          <strong>لا يوجد جمع بيانات على خوادمنا:</strong> لا نرسل بيانات الملف الشخصي أو الأرقام الموثوقة أو كلمة مرور الإيقاف إلى خوادمنا أو إلى حزمة الإعلانات. يحتوي الإصدار 3.9 على Google AdMob وGoogle UMP؛ وتعالج Google بيانات الإعلانات الموضحة أدناه.
         </div>
+
+        <h3 class="sub-title">الإعلانات وخيارات الخصوصية — الإصدار 3.9</h3>
+        <p>قد تظهر إعلانات بانر من Google AdMob على الشاشة الرئيسية عند الاتصال بالإنترنت. لا تظهر إعلانات على شاشة إنذار العثور على الهاتف. لا تعتمد ميزة الرنين عبر المكالمات على تحميل إعلان أو الموافقة على إعلانات مخصصة.</p>
+        <p>قد تجمع Google وتشارك عنوان IP والموقع التقريبي المستنتج منه، ومعرّفات الجهاز أو الإعلانات، وتفاعلات الإعلانات والتطبيق، وبيانات التشخيص، لأغراض الإعلانات والتحليلات ومنع الاحتيال. تُنقل هذه البيانات باتصال مشفّر. لا نمرّر إلى حزمة الإعلانات الاسم أو فصيلة الدم أو دفتر العناوين أو أرقام المتصلين أو كلمة مرور الإيقاف.</p>
+        <p>تُستخدم Google UMP لعرض خيارات الموافقة حيث تلزم. يمكن تعديل الخيارات عبر «AD PRIVACY OPTIONS» عندما يكون هذا الخيار مطلوباً. قد تُعرض إعلانات محدودة أو غير مخصصة حيث تسمح الخيارات والقواعد المعمول بها. يخضع احتفاظ Google ببيانات الإعلانات وحذفها لسياساتها؛ ومسح بيانات التطبيق يحذف البيانات المحلية ولا يحذف تلقائياً بيانات لدى Google.</p>
+        <p><a href="https://policies.google.com/privacy">سياسة خصوصية Google</a> · <a href="https://policies.google.com/technologies/ads">كيفية استخدام Google للبيانات في الإعلانات</a></p>
 
         <h3 class="sub-title">الأذونات والقدرات المستخدمة</h3>
         <ul>
+          <li><strong>INTERNET / ACCESS_NETWORK_STATE / AD_ID:</strong> لعرض الإعلانات وإدارة خيارات الخصوصية على الشاشة الرئيسية؛ قد تضيف حزمة Google أذونات معرّفات الإعلانات وخدمات الإعلانات.</li>
+          <li><strong>SCHEDULE_EXACT_ALARM / WAKE_LOCK / VIBRATE:</strong> لتشغيل إنذار العثور على الهاتف في الوقت المناسب، واستمرار تشغيله واهتزازه مع إطفاء الشاشة، وفق إعدادات Android.</li>
           <li><strong>READ_CONTACTS:</strong> لجعل Android يمرّر أيضاً المكالمات الواردة من أرقام محفوظة في جهات الاتصال إلى خدمة فحص المكالمات. لا يستخدم التطبيق هذا الإذن لنسخ أو رفع دفتر العناوين.</li>
           <li><strong>POST_NOTIFICATIONS:</strong> لإظهار إشعار الإنقاذ وإشعار استمرار تشغيل الإنذار.</li>
           <li><strong>USE_FULL_SCREEN_INTENT:</strong> لطلب إظهار واجهة الطوارئ فوق شاشة القفل للأحداث العاجلة. في الإصدارات الحديثة من Android قد يتطلب ذلك موافقة خاصة من المستخدم، ويمكن للمستخدم إلغاءها من إعدادات النظام.</li>
@@ -313,10 +321,10 @@
         </ul>
 
         <h3 class="sub-title">البيانات التي لا يصل إليها التطبيق</h3>
-        <p>لا يطلب التطبيق أذونات SMS أو الموقع أو الكاميرا أو الميكروفون أو سجل المكالمات. كما أن الإصدار الحالي لا يطلب إذن الإنترنت ولا يرسل بيانات الملف الطبي أو أرقام الإنقاذ أو كلمة المرور إلى خوادم خارجية.</p>
+        <p>لا يطلب التطبيق أذونات SMS أو الموقع أو الكاميرا أو الميكروفون أو سجل المكالمات. يُستخدم الإنترنت للإعلانات وإدارة خيارات الخصوصية على الشاشة الرئيسية. لا نمرّر بيانات الملف الطبي أو أرقام الإنقاذ أو كلمة المرور إلى حزمة الإعلانات.</p>
 
         <h3 class="sub-title">مشاركة البيانات</h3>
-        <p>لا يبيع التطبيق بياناتك ولا يشارك بيانات التطبيق المخزنة محلياً مع معلنين أو وسطاء بيانات أو خدمات تحليلية. بيانات فحص المكالمات مصدرها نظام Android وشبكة الهاتف وتُستخدم محلياً لتحديد تفعيل الإنقاذ.</p>
+        <p>تُستخدم بيانات فحص المكالمات محلياً لتفعيل العثور على الهاتف. لا نمرّر بيانات الملف الشخصي والأرقام الموثوقة إلى المعلنين. تشارك حزمة Google AdMob إشارات الإعلانات مع Google وشركائها وفق إعدادات الموافقة وسياسات Google.</p>
 
         <h3 class="sub-title">الاحتفاظ بالبيانات وحذفها</h3>
         <p>تبقى معلومات الملف الطبي، أرقام الإنقاذ، الإعدادات، وبصمة كلمة المرور محلياً حتى يقوم المستخدم بتعديلها أو مسح بيانات التطبيق أو إلغاء تثبيته. يحتفظ التطبيق بطوابع زمنية محلية لازمة للتعرف على تسلسل المكالمتين وبآخر معلومات تشخيصية إلى أن يتم استبدالها أو حذف بيانات التطبيق.</p>
@@ -351,9 +359,9 @@
             <li><strong>Contacts permission (READ_CONTACTS):</strong> The app may request this permission so Android will also deliver calls from numbers already saved in the phone's Contacts to the call-screening service. The current app does not enumerate, display, upload, or transmit the device's contacts database.</li>
             <li><strong>Notifications &amp; full-screen alerts:</strong> The app uses notifications and a full-screen alert to present the emergency interface on the lock screen when rescue is triggered, subject to Android version, system settings, and user-granted access.</li>
             <li><strong>Audio settings &amp; rescue alarm:</strong> When rescue starts, the app temporarily raises the Android alarm stream and starts a looping rescue alarm through a foreground playback service. The alarm continues until the correct locally configured rescue-stop password is entered, or until Android/the device owner stops the app at the system level.</li>
-            <li><strong>Medical information on lock screen:</strong> During an active rescue event, information the user entered—such as display name, blood group, and ICE number—may be shown above the lock screen so a person who finds the phone can view it.</li>
+            <li><strong>Personal profile:</strong> Name, blood group, and emergency-contact fields remain local. The alarm page hides these fields when Android reports that the device is locked. We do not pass these values to the advertising SDK.</li>
           </ul>
-          <p style="margin-bottom: 0;"><strong>The app does not use:</strong> SMS, location, camera, microphone, Call Log, or an app-operated cloud backend. Version 3.7 does not declare the Android <code>INTERNET</code> permission.</p>
+          <p style="margin-bottom: 0;"><strong>The app does not use:</strong> SMS, location, camera, microphone, Call Log, or an app-operated cloud backend. The main-screen ads and privacy messages use the <code>INTERNET</code> permission. Call-triggered phone finding continues to work without internet.</p>
         </div>
 
         <hr class="divider" />
@@ -370,18 +378,26 @@
           <tr><th>Data</th><th>Purpose</th><th>Processing / storage</th></tr>
           <tr><td>Display name, blood group, ICE number</td><td>Display the emergency information card during a rescue event</td><td>Stored locally on the device</td></tr>
           <tr><td>Rescue Caller numbers (up to 10)</td><td>Compare incoming caller ID with the user's authorized Rescue Caller list</td><td>Stored locally on the device</td></tr>
-          <tr><td>Incoming caller number and call-screening details</td><td>Determine whether the call is authorized, implement the two-calls-within-30-seconds trigger, and provide last-event diagnostics</td><td>Processed locally; the app also keeps local diagnostic information about the most recently screened call, including the last screened number, until replaced or app data is cleared</td></tr>
+          <tr><td>Incoming caller number and call-screening details</td><td>Determine whether the call is authorized, implement the two-calls-within-30-seconds trigger, and provide last-event diagnostics</td><td>Processed locally; the app also keeps local diagnostic information about the most recently screened call, with most caller digits masked in diagnostic text, until replaced or app data is cleared</td></tr>
           <tr><td>Caller-number verification status</td><td>Support the optional setting that rejects calls where network verification explicitly fails</td><td>Stored locally on the device as diagnostic/settings data</td></tr>
           <tr><td>Rescue-stop password</td><td>Prevent the rescue alarm from being stopped through the app UI without the correct password</td><td>The plaintext password is not stored. The app stores only a random salt and a one-way PBKDF2-HMAC-SHA256 derived value locally</td></tr>
           <tr><td>App settings, feature state, timestamps, and last-event diagnostics</td><td>Operate the rescue sequence and show readiness/diagnostic state to the user</td><td>Stored locally on the device</td></tr>
         </table>
 
         <div class="good-note">
-          <strong>No developer-server collection:</strong> The current app does not transmit this information to a server operated by us. The app does not include advertising, analytics, or Firebase SDKs, and we do not sell app data or share it for advertising purposes.
+          <strong>No developer-server collection:</strong> We do not send the local profile, trusted caller list, or stop password to our servers or pass them to the advertising SDK. Version 3.9 includes Google AdMob and Google UMP; Google processes the advertising data described below.
         </div>
+
+        <h3 class="sub-title">Advertising and Privacy Choices — Version 3.9</h3>
+        <p>Google AdMob banners may appear on the online main screen. The phone-finding alarm page has no ads. Call-triggered ringing does not depend on loading an ad or agreeing to personalized ads.</p>
+        <p>Google may collect and share IP-derived approximate location, advertising/device identifiers, interactions and diagnostics for advertising, analytics and fraud prevention, using encrypted transport. We do not pass names, medical fields, contacts, caller numbers or stop passwords to the ad SDK.</p>
+        <p>Google UMP presents consent choices where required. Use AD PRIVACY OPTIONS when available to change them. Limited or non-personalized ads may remain permissible. Google's policies govern its advertising-data retention and deletion; clearing app storage deletes local data, not data already held by Google.</p>
+        <p><a href="https://policies.google.com/privacy">Google Privacy Policy</a> · <a href="https://policies.google.com/technologies/ads">Google advertising data use</a></p>
 
         <h3 class="sub-title">Permissions and System Capabilities</h3>
         <ul>
+          <li><strong>INTERNET / ACCESS_NETWORK_STATE / AD_ID:</strong> For main-screen advertising and privacy choices. Google's SDK may contribute advertising identifier and advertising-services permissions.</li>
+          <li><strong>SCHEDULE_EXACT_ALARM / WAKE_LOCK / VIBRATE:</strong> For timely phone-finding alarms, playback and vibration with the screen off, subject to Android settings.</li>
           <li><strong>READ_CONTACTS:</strong> Used so Android Telecom can also deliver calls from numbers that are already stored in Contacts to the call-screening service. The app does not use this permission to copy or upload the address book.</li>
           <li><strong>POST_NOTIFICATIONS:</strong> Used for rescue notifications and the visible notification while the rescue alarm is active.</li>
           <li><strong>USE_FULL_SCREEN_INTENT:</strong> Used to request the emergency interface above the lock screen for an urgent rescue event. On newer Android versions this can require separate user approval and can be revoked in system settings.</li>
@@ -391,10 +407,10 @@
         </ul>
 
         <h3 class="sub-title">Data the App Does Not Access</h3>
-        <p>The current app does not request SMS, location, camera, microphone, or Call Log permissions. It also does not request the Android Internet permission and does not transmit the medical profile, Rescue Caller list, or rescue password to an external application server.</p>
+        <p>The current app does not request SMS, location, camera, microphone, or Call Log permissions. Internet access is used for main-screen advertising and privacy choices. We do not pass the medical profile, Rescue Caller list, or rescue password to the advertising SDK.</p>
 
         <h3 class="sub-title">Data Sharing</h3>
-        <p>The app does not sell your data or share locally stored app data with advertisers, data brokers, or analytics providers. Call-screening information originates from Android/your carrier and is processed locally to decide whether rescue should activate.</p>
+        <p>Call-screening data is processed locally to activate phone finding. We do not pass profile data or trusted numbers to advertisers. Google AdMob shares advertising signals with Google and its partners in accordance with consent settings and Google's policies.</p>
 
         <h3 class="sub-title">Retention and Deletion</h3>
         <p>Your medical profile, Rescue Caller numbers, settings, and password verification data remain locally until you change them, clear the app's storage, or uninstall the app. Local timestamps used for the double-call sequence and last-call diagnostic information remain until replaced/removed by later app activity or until app data is cleared.</p>
